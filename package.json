@@ -9,7 +9,8 @@
   "dependencies": {
     "async": "0.1.x",
     "mkdirp": "0.3.x",
-    "temp": "0.5.x"
+    "temp": "0.5.x",
+    "gm": "1.8.x"
   },
   "devDependencies": {
     "mocha": "1.8.x"
