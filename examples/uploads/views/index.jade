@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form(action="/", method="post", enctype="multipart/form-data")
+    span Input File 
+    input(type="file", name="displayImage")
+    input(type="submit", value="Submit")

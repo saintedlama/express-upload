@@ -1,0 +1,25 @@
+{
+  "name": "express-upload",
+  "description": "Chainable file upload api for express",
+  "version": "0.1.0",
+  "main": "lib/upload.js",
+  "repository": "git://github.com/saintedlama/express-upload",
+  "author": "Christoph Walcher <christoph.walcher@gmail.com>",
+  "license": "BSD",
+  "dependencies": {
+    "async": "0.1.x",
+    "mkdirp": "0.3.x",
+    "temp": "0.5.x"
+  },
+  "devDependencies": {
+    "mocha": "1.8.x"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "express",
+    "file",
+    "upload"
+  ]
+}
