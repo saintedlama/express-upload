@@ -84,4 +84,4 @@ Executes a processing chain. Processing chains are reusable and may be executed 
 part of the upload or is empty an `err` is passed to the callback with a field `noFile` set to true.
 
 ## Show me some example
-[Simple upload](tree/master/examples/uploads).
+[Simple upload](examples/uploads).
