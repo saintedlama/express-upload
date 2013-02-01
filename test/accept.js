@@ -18,8 +18,15 @@ describe('accept', function() {
     });
 
     it('should allow regex parameter', function(done) {
-        accept([/audio*/], { type : 'audio/mp4'}, function(err) {
+        accept([/audio.*/], { type : 'audio/mp4'}, function(err) {
             assert.ifError(err);
+            done();
+        });
+    });
+
+    it('should match regex parameter', function(done) {
+        accept([/audio.*/], { type : 'image/jpeg'}, function(err) {
+            assert.ok(err);
             done();
         });
     });
