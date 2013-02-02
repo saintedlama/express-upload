@@ -1,5 +1,6 @@
 # Express-Upload
-Express-Upload exposes a chainable/fluent API to process uploaded files in express.
+Express-Upload exposes a chainable/fluent API to process uploaded files in express. In case you're searching for
+a solution focused on processing image uploads, take a look at [express-upload-resizer](https://github.com/thomaspeklak/express-upload-resizer).
 
 ## Installation
 
