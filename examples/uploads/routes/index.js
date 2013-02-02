@@ -27,3 +27,9 @@ exports.upload = function(req, res) {
         res.redirect('/');
     });
 };
+
+// Routing with middleware is done in app.js
+exports.uploadUsingMiddleware = function(req, res) {
+    console.log('Got a file', req.files.displayImage, 'uploaded to public/images with name', req.files.displayImage.name);
+    res.redirect('/');
+};

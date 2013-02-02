@@ -1,10 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-
-  form(action="/", method="post", enctype="multipart/form-data")
-    span Input File 
-    input(type="file", name="displayImage")
-    input(type="submit", value="Submit")
+  h1 Express-Upload Examples
+  
+  h2 Upload and resize
+    form(action="/", method="post", enctype="multipart/form-data")
+      span Input File 
+      input(type="file", name="displayImage")
+      input(type="submit", value="Submit")
+        
+  h2 Upload and resize using middleware
+    form(action="/middleware", method="post", enctype="multipart/form-data")
+      span Input File 
+      input(type="file", name="displayImage")
+      input(type="submit", value="Submit")

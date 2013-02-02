@@ -83,5 +83,26 @@ Where file is the processed upload file and `cb` is the callback.
 Executes a processing chain. Processing chains are reusable and may be executed multiple times. In case the file is not
 part of the upload or is empty an `err` is passed to the callback with a field `noFile` set to true.
 
+
+## Middleware
+Instead of executing and managing upload file processing in your routes express-upload can be used as middleware in express.
+Any processing errors (no file, file type not accepted,...) are stored in a `err` property of the file to upload.
+
+### Example
+
+      // Build an upload instance but don't execute it right now
+      var uploadDefinition = upload()
+          .accept('image/jpeg')
+          .gm(function(gm) {
+              return gm.resize(false, 100);
+          })
+          .to(['public', 'images']);
+      
+      // Define a middleware for handling image upload
+      app.post('/middleware', uploadDefinition.middleware('displayImage'), routes.uploadUsingMiddleware);
+
+In case an error would occur when uploading req.files.displayImage, req.files.displayImage.err would be set to an Error
+object.
+
 ## Show me some example
 [Simple upload](examples/uploads).
