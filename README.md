@@ -86,7 +86,7 @@ part of the upload or is empty an `err` is passed to the callback with a field `
 
 
 ## Middleware
-Instead of executing and managing upload file processing in your routes express-upload can be used as middleware in express.
+Instead of executing and managing upload file processing in your routes, express-upload can be used as middleware in express.
 Any processing errors (no file, file type not accepted,...) are stored in a `err` property of the file to upload.
 
 ### Example
@@ -102,7 +102,7 @@ Any processing errors (no file, file type not accepted,...) are stored in a `err
       // Define a middleware for handling image upload
       app.post('/middleware', uploadDefinition.middleware('displayImage'), routes.uploadUsingMiddleware);
 
-In case an error would occur when uploading req.files.displayImage, req.files.displayImage.err would be set to an Error
+In case an error would occur when uploading `req.files.displayImage`, `req.files.displayImage.err` would be set to an Error
 object.
 
 ## Show me some example
