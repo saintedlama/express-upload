@@ -6,7 +6,7 @@ a solution focused on processing image uploads, take a look at [express-upload-r
 
 ## Installation
 
-    $ npm install passport
+    $ npm install express-upload
     
 ## Usage
 
